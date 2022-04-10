@@ -1,0 +1,11 @@
+#!/bin/bash
+
+killall polybar
+
+for m in $(polybar --list-monitors | grep "primary" | cut -d":" -f1); do
+    MONITOR=$m polybar --reload primary &
+done
+
+for m in $(polybar --list-monitors | grep -v "primary"|  cut -d":" -f1); do
+    MONITOR=$m polybar --reload secondary &
+done
