@@ -1,0 +1,56 @@
+!! Colorscheme
+
+! special
+*.foreground: #ffffff
+*.background: #002222
+*.cursorColor: #a1cdf7
+
+! black
+*.color0: #4e4e4e
+*.color8: #7c7c7c
+
+! red
+*.color1: #ff6c60
+*.color9: #ffb6b0
+
+! green
+*.color2: #a8ff60
+*.color10: #ceffac
+
+! yellow
+*.color3: #ffffb6
+*.color11: #ffffcb
+
+! blue
+*.color4: #69cbfe
+*.color12: #b5dcfe
+
+! magenta
+*.color5: #ff73fd
+*.color13: #ff9cfe
+
+! cyan
+*.color6: #c6c5fe
+*.color14: #dfdffe
+
+! white
+*.color7: #eeeeee
+*.color15: #ffffff
+
+!! URxvt Appearance
+URxvt.font: xft:FiraCode Nerd Font:style=Retina:size=14
+URxvt.boldFont: xft:FiraCode Nerd Font:style=Bold:size=14
+URxvt.italicFont: xft:Operator Mono Book:style=Book:size=14
+URxvt.boldItalicfont: xft:Operator Mono Bold:style=Bold Italic:size=14
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 24
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso14755: false

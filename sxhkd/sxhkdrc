@@ -6,9 +6,17 @@
 super + Return
 	kitty
 
+super + shift + Return
+	urxvt
+
 # program launcher
 super + @space
 	dmenu_run
+
+super + d
+	bash .config/rofi/launchers/colorful/launcher.sh
+
+#super + shift + z
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -55,7 +63,8 @@ super + ctrl + {m,x,y,z}
 #
 
 # focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
+#super + {_,shift + }{h,j,k,l}
+super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
@@ -81,15 +90,17 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+#super + {_,shift + }{1-9,0}
+super + {_,shift + }{ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave,dollar}
+	bspc {desktop -f,node -d} '^{1-9,10,11}'
 
 #
 # preselect
 #
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
+#super + ctrl + {h,j,k,l}
+super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
@@ -119,3 +130,16 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# custom
+#
+
+# locker
+super + shift + x
+	locker
+
+
+# power menu
+super + alt + p
+	.config/rofi/applets/menu/powermenu.sh
