@@ -2,7 +2,7 @@
 
 ! special
 *.foreground: #ffffff
-*.background: #002222
+*.background: #583600
 *.cursorColor: #a1cdf7
 
 ! black
@@ -39,9 +39,9 @@
 
 !! URxvt Appearance
 URxvt.font: xft:FiraCode Nerd Font:style=Retina:size=14
-URxvt.boldFont: xft:FiraCode Nerd Font:style=Bold:size=14
-URxvt.italicFont: xft:Operator Mono Book:style=Book:size=14
-URxvt.boldItalicfont: xft:Operator Mono Bold:style=Bold Italic:size=14
+URxvt.boldFont: xft:Operator Mono:style=Medium Italic:size=14
+!URxvt.italicFont: xft:Operator Mono Book:style=Book:size=14
+URxvt.boldItalicfont: xft:Operator Mono:style=Bold Italic:size=14
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24
@@ -53,4 +53,8 @@ URxvt.scrollBar: false
 URxvt.scrollBar_right: false
 URxvt.urgentOnBell: true
 URxvt.depth: 24
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.iso14755: false
+URxvt.iso14755_52: false

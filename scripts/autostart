@@ -1,0 +1,12 @@
+apps=("phpstorm" "mattermost-desktop" "google-chrome-stable" "dbeaver" "brave" "thunderbird")
+
+if [[ ! -f "/tmp/autostarted" ]]
+then
+	for app in ${apps[@]}; do
+		echo Starting $app
+		exec $app &
+	done
+	echo 'started' > /tmp/autostarted
+fi
+
+mailcatcher &

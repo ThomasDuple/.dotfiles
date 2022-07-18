@@ -1,0 +1,17 @@
+#!/bin/bash
+
+alias aliases="vim $df/sh/.aliases"
+alias rl="clear && source $df/sh/.zshrc"
+alias zshrc="vim $df/sh/.zshrc"
+alias polyconfig="vim $df/polybar/config.ini"
+
+#alias notepad="vim ~/Documents/notepads/$(date + "%F-%T")"
+
+alias :q="exit"
+
+alias httpdrestart="sudo systemctl restart httpd && systemctl status httpd"
+
+alias zhistory="cat ~/.zsh_history"
+alias doct_gen="bin/console doctrine:migrations:generate"
+alias doct_diff="bin/console doctrine:migrations:diff"
+alias doct_migr="bin/console doctrine:migrations:migrate"

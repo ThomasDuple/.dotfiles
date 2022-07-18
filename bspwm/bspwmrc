@@ -2,21 +2,24 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bluetoothctl power on
+#bluetoothctl power on
+wmname LG3D &
 
-source ~/.dotfiles/vars
-~/.dotfiles/scripts/monitors
-~/.dotfiles/scripts/wallpaper/script
-~/.dotfiles/polybar/start
+df=~/.dotfiles
+
+source $df/vars
+$df/scripts/monitors
+$df/scripts/wallpaper/script
+$df/polybar/start
 
 picom --experimental-backends &
 
 bspc config ignore_ewmh_focus true
-bspc monitor HDMI-2 -d 一 二 三 四
-bspc monitor HDMI-3 -d 五 六 七
-bspc monitor DP-2 -d 八 九 十 $
+bspc monitor DP-1 -d 一 二 三 四
+bspc monitor HDMI-2 -d 五 六 七
+bspc monitor HDMI-1 -d 八 九 十
 
-bspc wm --reorder-monitors HDMI-2 HDMI-3 DP-2
+bspc wm --reorder-monitors DP-1 HDMI-2 HDMI-1
 
 GAPS=$UI_GAPS
 TOP_GAP=$(polybar --dump=border-size base)
@@ -37,12 +40,14 @@ bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a Chromium desktop='一'
-bspc rule -a 'jetbrains-phpstorm' desktop='二'  
-bspc rule -a DBeaver desktop='六' # dbeaver
+bspc rule -a 'Google-chrome' desktop='五'
+#bspc rule -a 'jetbrains-phpstorm' desktop='二'  
+bspc rule -a DBeaver desktop='七'
 bspc rule -a Mattermost desktop='八'
+bspc rule -a Brave-browser desktop='十' 
+bspc rule -a Thunderbird desktop='六'
 
-~/autostart &
+$df/scripts/autostart &
 
 #bspc rule -a Gimp desktop='^8' state=floating follow=on
 #bspc rule -a Chromium desktop='^2'

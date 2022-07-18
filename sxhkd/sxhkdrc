@@ -14,7 +14,10 @@ super + @space
 	dmenu_run
 
 super + d
-	bash .config/rofi/launchers/colorful/launcher.sh
+	rofi -show drun
+
+super + h
+	rofi -show ssh
 
 #super + shift + z
 
@@ -90,9 +93,9 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-#super + {_,shift + }{1-9,0}
-super + {_,shift + }{ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave,dollar}
-	bspc {desktop -f,node -d} '^{1-9,10,11}'
+super + {_,shift + }{1-9,0}
+#super + {_,shift + }{ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave}
+	bspc {desktop -f,node -d} '^{1-9,10}'
 
 #
 # preselect
@@ -137,9 +140,22 @@ super + {Left,Down,Up,Right}
 
 # locker
 super + shift + x
-	locker
-
+	physlock
 
 # power menu
-super + alt + p
-	.config/rofi/applets/menu/powermenu.sh
+super + space
+	rofi -show combi
+
+# snipping tool
+super + shift + s
+	import png:- | xclip -selection clipboard -t image/png
+
+# tabbed
+super + less
+	dunstify "tabbed less"
+	$df/scripts/copied/tabc.sh $(bspc query -N -n east) add $(bspc query -N -n focused)
+
+super + ctrl + less
+	dunstify "tabbed more"
+	$df/scripts/copied/tabc.sh $(bspc query -N -n {west,south,north,east}) add $(bspc query -N -n focused)
+
