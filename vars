@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # UI
-export UI_GAPS=0
+export UI_GAPS=15
 
 # COLORS
 export COLOR_PRIMARY="#FFD866"
