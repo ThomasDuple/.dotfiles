@@ -4,7 +4,7 @@ alias aliases="vim $df/sh/.aliases"
 alias rl="clear && source $df/sh/.zshrc"
 alias zshrc="vim $df/sh/.zshrc"
 alias polyconfig="vim $df/polybar/config.ini"
-alias e="exa --long --header --git"
+alias e="exa --long --header --git --all"
 
 #alias notepad="vim ~/Documents/notepads/$(date + "%F-%T")"
 

@@ -15,11 +15,11 @@ $df/polybar/start
 picom --experimental-backends &
 
 bspc config ignore_ewmh_focus true
-bspc monitor DP-1 -d 一 二 三 四
-bspc monitor HDMI-2 -d 五 六 七
+bspc monitor HDMI-2 -d 一 二 三 四
+bspc monitor DP-1 -d 五 六 七
 bspc monitor HDMI-1 -d 八 九 十
 
-bspc wm --reorder-monitors DP-1 HDMI-2 HDMI-1
+bspc wm --reorder-monitors HDMI-2 DP-1 HDMI-1
 
 GAPS=$UI_GAPS
 TOP_GAP=$(polybar --dump=border-size base)

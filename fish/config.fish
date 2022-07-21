@@ -7,4 +7,8 @@ export PATH="$PATH:$GEM_HOME/bin"
 export df=$HOME/.dotfiles
 source $df/sh/.aliases
 
+function fish_greeting
+    neofetch --config $df/neofetch/mini.conf
+end
+
 starship init fish | source

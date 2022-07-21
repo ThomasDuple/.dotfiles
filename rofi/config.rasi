@@ -8,7 +8,7 @@ configuration {
 	show-icons: true;
 	terminal: "kitty";
 /*	ssh-client: "ssh";*/
-	ssh-command: "urxvt -e {ssh-client} {host} [-p {port}]";
+	ssh-command: "alacritty -o "colors.primary.background='#241717'" -e {ssh-client} {host} [-p {port}]";
 /*	run-command: "{cmd}";*/
 /*	run-list-command: "";*/
 /*	run-shell-command: "{terminal} -e {cmd}";*/
