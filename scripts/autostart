@@ -1,4 +1,4 @@
-apps=("phpstorm" "mattermost-desktop" "google-chrome-stable" "dbeaver" "brave" "thunderbird")
+apps=("phpstorm" "mattermost-desktop" "google-chrome-stable" "dbeaver" "brave" "thunderbird", "autoadb scrcpy -Sw")
 
 if [[ ! -f "/tmp/autostarted" ]]
 then

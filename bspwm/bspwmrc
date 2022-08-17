@@ -10,6 +10,7 @@ df=~/.dotfiles
 source $df/vars
 $df/scripts/monitors
 $df/scripts/wallpaper/script
+#$df/scripts/ssh-agent
 $df/polybar/start
 
 picom --experimental-backends &
@@ -40,12 +41,13 @@ bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a 'Google-chrome' desktop='五'
+#bspc rule -a 'Google-chrome' desktop='五'
 #bspc rule -a 'jetbrains-phpstorm' desktop='二'  
 bspc rule -a DBeaver desktop='七'
 bspc rule -a Mattermost desktop='八'
 bspc rule -a Brave-browser desktop='十' 
 bspc rule -a Thunderbird desktop='六'
+bspc rule -a scrcpy state=pseudo_tiled desktop='十' 
 
 $df/scripts/autostart &
 

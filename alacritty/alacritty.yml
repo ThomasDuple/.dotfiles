@@ -435,6 +435,10 @@ cursor:
 #   - (Windows) powershell
 shell:
   program: /bin/fish
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
 #  args:
 #    - --login
 
